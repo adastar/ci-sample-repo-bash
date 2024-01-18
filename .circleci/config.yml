@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - matlab/install:
-          release: latest
+          release: R2024a
       - matlab/run-command:
-          command: ver
+          command: simulink
       - matlab/run-tests:
           source-folder: code
       - matlab/run-build:
