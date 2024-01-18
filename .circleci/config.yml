@@ -13,8 +13,11 @@ jobs:
       - checkout
       - matlab/install:
           release: R2023b
+          products: Simulink Parallel_Computing_Toolbox
       - matlab/run-command:
           command: magic(3)
+      - matlab/run-command:
+          command: simulink
       - matlab/run-tests:
           source-folder: code
           use-parallel: Yes
