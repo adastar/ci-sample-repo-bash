@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - matlab/install:
-          release: R2023b
+          release: latest
       - matlab/run-command:
           command: ver
       - matlab/run-tests:
