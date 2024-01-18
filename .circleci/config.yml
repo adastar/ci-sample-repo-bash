@@ -12,10 +12,12 @@ jobs:
     steps:
       - checkout
       - matlab/install:
-          release: R2024a
+          release: R2023b
       - matlab/run-command:
           command: simulink
       - matlab/run-tests:
           source-folder: code
+          use-parallel: Yes
+          test-results-html: results.html
       - matlab/run-build:
           tasks: clean mtest
